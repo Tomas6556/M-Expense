@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddTripExpenses">
+
+
+    <Button
+        android:id="@+id/add_NewExpenseButton"
+        android:layout_width="153dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:text="Add Expense"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.937"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/MainActivityLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/add_NewExpenseButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ExpenseLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="2dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TypeOfExpense"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:hint="@string/type_of_expense"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ExpenseAmountLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/AmountOfExpense"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:hint="@string/amount_of_the_expense"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/horizontal_InnerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tripDateInputWrapper"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="0dp"
+                android:layout_weight="1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/selectExpenseDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:focusable="false"
+                    android:hint="@string/expense_time"
+                    tools:ignore="TextContrastCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/descriptionInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ExpenseDescription"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:hint="@string/description_optional"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/expenseToolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Expense"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
+    </androidx.appcompat.widget.Toolbar>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

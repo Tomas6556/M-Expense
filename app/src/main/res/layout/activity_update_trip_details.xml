@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateNewTrip">
+
+    <Button
+        android:id="@+id/updateButton"
+        android:layout_width="153dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/update_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.937"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/MainActivityLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/updateButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tripNameInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="2dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/update_tripNameInputField"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:hint="Trip name"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/destinationInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/update_destinationInputField"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:hint="Destination"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/horizontal_InnerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tripDateInputWrapper"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="0dp"
+                android:layout_weight="1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/selectTripDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:focusable="false"
+                    android:hint="Trip Date"
+                    tools:ignore="TextContrastCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/returnDateWrapper"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginBottom="0dp"
+                android:layout_weight="1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/selectReturnDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:focusable="false"
+                    android:hint="Return Date"
+                    android:onClick="showDatePickerDialogForReturnDate"
+                    tools:ignore="TextContrastCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/descriptionInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/update_descriptionInputField"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:hint="Description (optional)"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/update_transportationInputField"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:hint="Transportation (optional)"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/update_riskAssessment_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingBottom="10dp"
+            android:text="@string/requires_risk_assessment_label"
+            tools:ignore="TextContrastCheck" />
+
+        <RadioGroup
+            android:id="@+id/riskAssessmentRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/update_radioButton_Yes"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/radioBtn_yes_txt"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+            <RadioButton
+                android:id="@+id/update_radioButton_No"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/radioBtn_No_txt"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+        </RadioGroup>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="185dp"
+        app:layout_constraintBottom_toTopOf="@+id/MainActivityLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sample_img"
+        tools:ignore="ImageContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

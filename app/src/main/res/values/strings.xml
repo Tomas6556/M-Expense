@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">M-Expense</string>
+    <string name="floatingActionButtonContentDescription">Description</string>
+
+    <!--   Json for DatabaseJsonActivity     -->
+
+    <string name="url">https://stuiis.cms.gre.ac.uk/COMP1424CoreWS/olympic</string>
+
+    <string name="json">
+        {"userId":"tb6934",
+        "detailList":[
+        {"name":"Android Conference", other fields},
+        {"name":"Client Meeting", other fields}]}
+
+    </string>
+
+    <!--  Label Text Strings in CreateNewTrip Activity  -->
+    <string name="tripName_label">Trip Name</string>
+    <string name="destination_label">Destination</string>
+    <string name="calendar_label">Date of the trip</string>
+    <string name="requires_risk_assessment_label">Requires risk assessment</string>
+    <string name="description_label">Description</string>
+    <string name="transportation_label">TransportationIO</string>
+    <string name="deposit_amount_label">Deposit Amount</string>
+
+    <!--   Data Picker String in CreateNewTrip Activity     -->
+    <string name="select_tripDate_text">Select your trip date</string>
+
+    <!--   Hint Text Strings in CreateNewTrip Activity     -->
+    <string name="tripHint_text">e.g. conference, client meeting, etc.</string>
+    <string name="destinationHint_text">e.g. London, France, Moscow , etc.</string>
+    <string name="depositAmountHint_text">e.g. 600, etc</string>
+    <string name="descriptionHint_text">e.g. business trip, family meeting, etc</string>
+
+    <!--   Button Strings in CreateNewTrip Activity     -->
+    <string name="radioBtn_yes_txt">Yes</string>
+    <string name="radioBtn_No_txt">No</string>
+    <string name="nextBtn_text">Next</string>
+    <string name="card_title">cardTitle</string>
+    <string name="update_button">Update</string>
+    <!-- Display Trip Details Strings -->
+    <string name="DTD_toolbarText">Trip Details</string>
+    <string name="DTD_TripImageDescription">image of the trip</string>
+    <string name="DTD_tripNameLabel">Trip Name</string>
+    <string name="DTD_tripNameText">Trip Name Text Here</string>
+    <string name="DTD_destinationLabel">Destination</string>
+    <string name="DTD_destinationText">Destination Text Goes here</string>
+    <string name="DTD_tripDateLabel">Trip Date</string>
+    <string name="DTD_tripDateText">Trip Date Text</string>
+    <string name="DTD_returnDateLabel">Return Date</string>
+    <string name="DTD_returnDateText">Return Date Text</string>
+    <string name="DTD_descriptionLabel">Description</string>
+    <string name="DTD_descriptionText">Description Text</string>
+    <string name="DTD_transportationLabel">Transportation</string>
+    <string name="DTD_transportationText">Transportation Text</string>
+    <string name="DTD_RQRiskAssessmentLabel">Required Risk Assessment</string>
+    <string name="DTD_RQRiskAssessmentText">Risk assessment text</string>
+    <string name="DTD_expensesButtonText">Expenses</string>
+    <string name="DTD_detailsButtonText">Details</string>
+    <string name="type_of_expense">Type of Expense</string>
+    <string name="description_optional">Description (optional)</string>
+    <string name="amount_of_the_expense">Amount of the Expense</string>
+    <string name="expense_time">Expense Time</string>
+
+    <!--   Spinner (Dropdown) Strings Values in CreateNewTrip Activity     -->
+    <string-array name="transportation">
+        <item>Airplane</item>
+        <item>Public transport</item>
+        <item>Rental vehicle</item>
+        <item>Personal vehicle</item>
+    </string-array>
+</resources>
